@@ -1,0 +1,532 @@
+
+
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap);
+
+:root {
+    --blue: rgb(41, 65, 171);
+    --purble: rgb(153, 51, 153);
+    --green: rgb(30 215 96);
+    --black: #000;
+    --white: #FFF;
+    --light-gray: #d9dadc;
+    --normal-gray: #919496;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {   
+    line-height: 1.4;
+}
+
+body,
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* CONTAINER */
+.sp-container {
+    margin: auto;
+    padding: 0 2em;
+}   
+@media (min-width: 775px) and (max-width: 991px) {
+    .sp-container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .sp-container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .sp-container {
+        width: 1170px;
+    }
+}
+/* CONTAINER */
+
+
+
+/* LOGO */
+.sp-logo {
+    height: 27px;
+    width: 89px;
+}
+
+@media (min-width: 992px) {
+    .sp-logo {
+        height: 40px;
+        width: 132px;
+    }
+}
+
+.sp-logo.sp-light {
+    fill: #fff;
+}
+.sp-logo.sp-dark {
+    fill: var(--black);
+}
+/* LOGO */
+
+
+
+/* HEADER */
+.sp-header {
+    background-color: var(--black);
+    padding: 1.2em 0;
+    position: relative;
+}
+.sp-header header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sp-header header > nav {
+    display: none;
+}
+@media (min-width: 992px) {
+    .sp-header header > nav {
+        display: block;
+    }
+}
+.sp-header header > nav ul {
+    display: flex;
+}
+.sp-header header > nav ul li:not(:last-of-type) {
+    margin-right: 2em;
+}
+.sp-header header > nav ul li.separate {
+    width: 1px;
+    background-color: var(--light-gray);
+}   
+.sp-header header > nav ul li a {
+    text-decoration: none;
+    color: var(--light-gray);
+    font-weight: 600;
+    font-size: 15px;
+}
+.sp-header header > nav ul li a:hover {
+    color: var(--green);
+}
+
+/*
+    MOBILE MENU
+*/
+.nav-mobile {
+    display: none;
+}
+@media (max-width: 992px) {
+    .nav-mobile {
+        display: block;
+    }
+}
+.nav-mobile > button {
+    background-color: #000;
+    color: #fff;
+    border: hidden;
+    font-size: 22px;
+    position: relative;
+    z-index: 1;
+}
+.nav-mobile > nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 500px;
+    height: 100vh;
+    background-color: #000;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.nav-mobile > nav ul li {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 0.4em;
+    letter-spacing: -1px;
+}
+@media (max-width: 500px) {
+    .nav-mobile nav {
+        width: 100%;
+    }
+    .nav-mobile > nav ul li {
+        font-size: 28px;
+    }
+    .nav-mobile > nav ul li:nth-child(5),
+    .nav-mobile > nav ul li:nth-child(6) {
+        font-size: 22px !important;
+    }
+}
+.nav-mobile > nav ul li.separate {
+    height: 2px;
+    width: 20px;
+    background-color: var(--white);
+    margin: 40px 0;
+}
+.nav-mobile > nav ul li:nth-child(5),
+.nav-mobile > nav ul li:nth-child(6) {
+    font-size: 28px;
+    font-weight: 400;
+}
+.nav-mobile > nav ul li a:hover {
+    color: var(--green);
+}
+.nav-mobile > nav svg {
+    width: 89px;
+    height: 28px;
+}
+.show-menu {
+    display: flex !important;
+}
+/* HEADER */
+
+
+/* PANNER */
+.sp-banner {
+    background-color: var(--purble);
+}
+
+.sp-banner-flex { 
+    display: flex;
+}
+
+.sp-banner-flex .sp-banner-content {
+    margin-right: 2em;
+}
+
+.sp-banner-flex .sp-banner-content > p {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 3em;
+}
+.sp-banner-flex .sp-banner-content > h1 {
+    color: var(--white);
+    font-size: 3.5em;
+    margin-bottom: .5em;
+    letter-spacing: -2px;
+}
+
+.sp-banner-flex .sp-banner-content > h2 {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1.3em;
+    margin-bottom: 1.5em;
+}
+
+.sp-banner-flex .sp-banner-content > button {
+    padding: 1em 2em;
+    border-radius: 3em;
+    font-weight: 600;
+    background-color: var(--black);
+    color: var(--white);
+    border: hidden;
+    display: block;
+    margin-bottom: 3em;
+    cursor: pointer;
+}
+
+.sp-banner-flex .sp-banner-content > button:hover {
+    transform: scale(1.0.5);
+}
+
+.sp-banner-flex .sp-banner-image {
+    padding-top: 2em;
+}
+
+.sp-banner-flex .sp-banner-image .img {
+    background-image: url(images/banner-image.jpg);
+    background-position: center center;
+    background-size: 100%;
+    width: 400px;
+    height: 400px;
+}
+
+.sp-banner-flex .sp-banner-content .plan-details {
+    font-weight: 400;
+    font-size: .7em;
+    max-width: 90%;
+}
+
+.sp-banner-flex .sp-banner-content .plan-details a {
+    color: var(--white);
+}
+
+@media (min-width: 992px) {
+    .sp-banner {
+        padding: 5em 0 3em;
+    }
+    .sp-banner-flex .sp-banner-image .img {
+        max-width: 400px;
+    }
+}
+@media (min-width: 775px) and (max-width: 992px) {
+    .sp-banner-flex {
+        margin-right: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 3em 0;
+    }
+    .sp-banner-flex .sp-banner-content > p:not(p.plan-details){
+        text-align: center;
+        font-size: 10px;
+    }
+    .sp-banner-flex .sp-banner-content h1 {
+        font-size: 45px;
+    }
+    .sp-banner-flex .sp-banner-image .img {
+        width: 320px;
+        height: 320px;
+    }
+}
+@media (max-width: 774px) {
+    .sp-banner-flex {
+        flex-direction: column;
+        align-items: center;
+        padding: 3em 0;
+    }
+    .sp-banner-flex .sp-banner-content > p:not(p.plan-details){
+        text-align: center;
+        font-size: 10px;
+    }
+    .sp-banner-flex .sp-banner-content > p.plan-details{
+        max-width: 100%;
+    }
+    .sp-banner-flex .sp-banner-content {
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .sp-banner-flex .sp-banner-content h1 {
+        font-size: 32px;
+    }
+    .sp-banner-flex .sp-banner-image .img {
+        width: 320px;
+        height: 320px;
+    }
+}
+/* PANNER */
+
+/* Download */
+.sp-download {
+    min-height: 550px;
+    background-image: url(images/circles\ desktop.svg);
+    background-position: right center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-color: var(--blue);
+}
+.sp-download article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5em 0;
+}
+
+.sp-download article > p {
+    color: var(--green);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2em;
+} 
+
+.sp-download article > h1 {
+    color: var(--green);
+    font-size: 60px;
+    margin-bottom: .5em;
+}
+
+.sp-download article > h2 {
+    color: var(--green);
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 2em;
+}
+
+.sp-download article > button {
+    padding: 14px 32px;
+    background-color: var(--green);
+    color: var(--blue);
+    border: hidden;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* 
+    SCREEN
+*/
+
+@media (max-width: 1200px) {
+    .sp-download {
+        background-image: url(images/circles\ mopile.svg);
+        background-size: auto 170%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .sp-download article {
+        align-items: center;
+        text-align: center;
+    }
+    .sp-download article > h1 {
+        font-size: 40px;
+    }
+    .sp-download article > h2 {
+        font-size: 20px;
+    }
+}
+
+/* Download */
+
+/* Footer */
+.sp-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 5em 0 3em;
+}
+.sp-footer nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4em;
+}
+.sp-footer nav .logo {
+    margin-right: 65px;
+}
+.sp-footer nav .top-links {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.sp-footer nav .top-links dl dt {
+    margin: 11px 0 20px;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--normal-gray);
+}
+.sp-footer nav .top-links dl dd {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.sp-footer nav .top-links dl dd:hover {
+    color: var(--green);
+    cursor: pointer;
+}
+
+.sp-footer nav .social-links ul {
+    margin-left: 12em;
+    display: flex;
+    align-self: flex-start;
+    gap: 15px;
+}
+.sp-footer nav .social-links ul li {
+    background-color: #222326;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.sp-footer nav .social-links ul li:hover a {
+    color: var(--green);
+}
+.sp-footer nav .social-links ul li a i {
+    display: block;
+    font-size: 21px;
+}
+
+.sp-footer .sp-country p {
+    text-align: right;
+    font-size: 12px;
+    letter-spacing: -.6px;
+    word-spacing: 2px;
+    color: var(--normal-gray);
+    cursor: pointer;
+}
+
+.sp-footer .sp-country p:hover {
+    color: var(--green);
+}
+
+.sp-footer .bottom-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    font-size: 12px;
+    color: var(--normal-gray);
+}
+
+.sp-footer .bottom-links ul {
+    display: flex;
+    gap: 20px;
+}
+.sp-footer .bottom-links ul li:hover {
+    color: var(--green);
+    cursor: pointer;
+}
+
+@media (max-width: 775px) {
+    .sp-footer nav .top-links {
+        flex-direction: column;
+    }
+    .sp-footer nav .top-links dl:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+    .sp-footer nav .social-links ul li {
+        width: 40px;
+        height: 40px;
+    }
+    .sp-footer nav .social-links ul li a i {
+        font-size: 20px;
+    }
+    .sp-footer .sp-country p {
+        text-align: left;
+    }
+    .sp-footer .bottom-links {
+        font-size: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sp-footer nav {
+        flex-direction: column;
+    }
+    .sp-footer nav .logo {
+        margin-bottom: 20px;
+    }
+    .sp-footer nav .logo svg {
+        height: 30px;
+        width: 90px;
+    }
+    .sp-footer nav .top-links {
+        width: 80%;
+    }
+    .sp-footer nav .social-links {
+        margin: 120px 0 20px;
+    }
+    .sp-footer nav .social-links ul {
+        margin: 0;
+    }
+}
+/* Footer */
